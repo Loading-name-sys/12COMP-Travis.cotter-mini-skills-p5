@@ -1,8 +1,8 @@
 /********************************************************/
 //
 /********************************************************/
-var circleX = 50;
-var circleY = 200;
+var posX = 50;
+var posY = 200;
 var circleColour = (255, 255, 255, 50);
 var circleradiusX = (1);
 var circleradiusY = (1);
@@ -13,7 +13,7 @@ function setup() {
 function draw() {
   background(220);
 	stroke(circleColour);
-	ellipse(circleX, circleY, circleradiusX, circleradiusY);
+	ellipse(posX, posY, circleradiusX, circleradiusY);
 	
 	circleX = circleX + 1;
 	circleY = circleY - 1;

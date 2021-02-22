@@ -5,11 +5,45 @@ var ball = {
 	x: 0,
  	y: 100,
 	dia: 50
+	aball: function(){
+	ellipse(ball.x, ball.y, ball.dia);
+	if (ball.x >= (canvwidth - ball.dia/2)){
+		speedX = -3;
+	}
+	if (ball.x <= canvwidth - canvwidth + ball.dia/2){
+		speedX = 3;
+	}
+	if (ball.y >= canvheight - ball.dia/2){
+		speedY = -3;
+	}
+	if (ball.y <= canvheight - canvheight + ball.dia/2){
+		speedY = 3;
+	}
+	ball.x = ball.x + speedX;
+	ball.y = ball.y + speedY;
+}
 };
 var bball = {
 	x: 10,
  	y: 200,
 	dia: 50
+	abball: function(){
+	ellipse(bball.x, bball.y, bball.dia)
+	if (bball.x >= (canvwidth - bball.dia/2)){
+		speedB = -3
+	}
+	if (bball.x <= canvwidth - canvwidth + bball.dia/2){
+		speedB = 3;
+	}
+	if (bball.y >= canvheight - bball.dia/2){
+		speedD = -3;
+	}
+	if (bball.y <= canvheight - canvheight + bball.dia/2){
+		speedD = 3;
+	}
+	bball.x = bball.x + speedB;
+	bball.y = bball.y + speedD;
+}
 };
 var speedX = 3;
 var speedY = 3;
@@ -50,41 +84,9 @@ function draw() {
 
 // first ball
 
-function aball(){
-	ellipse(ball.x, ball.y, ball.dia);
-	if (ball.x >= (canvwidth - ball.dia/2)){
-		speedX = -3;
-	}
-	if (ball.x <= canvwidth - canvwidth + ball.dia/2){
-		speedX = 3;
-	}
-	if (ball.y >= canvheight - ball.dia/2){
-		speedY = -3;
-	}
-	if (ball.y <= canvheight - canvheight + ball.dia/2){
-		speedY = 3;
-	}
-	ball.x = ball.x + speedX;
-	ball.y = ball.y + speedY;
-}
+
 
 
 // second ball
 
-function abball(){
-	ellipse(bball.x, bball.y, bball.dia)
-	if (bball.x >= (canvwidth - bball.dia/2)){
-		speedB = -3
-	}
-	if (bball.x <= canvwidth - canvwidth + bball.dia/2){
-		speedB = 3;
-	}
-	if (bball.y >= canvheight - bball.dia/2){
-		speedD = -3;
-	}
-	if (bball.y <= canvheight - canvheight + bball.dia/2){
-		speedD = 3;
-	}
-	bball.x = bball.x + speedB;
-	bball.y = bball.y + speedD;
-}
+

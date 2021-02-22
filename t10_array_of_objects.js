@@ -31,10 +31,13 @@ var ballC ={
 
 function setup() {
   createCanvas(canvwidth, canvheight);
-	ball.x = random (0, 100);
-	ball.y = random (100, 200);
-	bball.x = random (10, 100);
-	bball.y = random (200, 300);
+	ball.x = random (0, 400);
+	ball.y = random (0, 400);
+	bball.x = random (0, 400);
+	bball.y = random (0, 400);
+
+	sSlider = createSlider(0, 255, 100);
+  sSlider.position(20, 20);
 }
 function draw() {
   background(r, g, b, /*t*/);

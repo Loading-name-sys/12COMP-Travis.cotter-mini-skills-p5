@@ -20,6 +20,7 @@ var canvheight = 400;
 var r = 225;
 var g = 225;
 var b = 225;
+var t = 0;
 var ballC ={
 	r:255,
 	g:255,
@@ -35,7 +36,7 @@ function setup() {
 	bball.y = random (200, 300)
 }
 function draw() {
-  background(r, g, b);
+  background(r, g, b, t);
 	ballC.r = random (50, 250);
 	ballC.g = random (50, 250);
 	ballC.b = random (50, 250);
@@ -61,7 +62,7 @@ function draw() {
 	if (bball.x <= canvwidth - canvwidth + bball.dia/2){
 		speedB = 3;
 	}
-	if (bball.y >= canvheight - bball.dia){
+	if (bball.y >= canvheight - bball.dia/2){
 		speedD = -3;
 	}
 	if (bball.y <= canvheight - canvheight + bball.dia/2){

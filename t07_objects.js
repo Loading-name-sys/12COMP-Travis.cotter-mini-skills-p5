@@ -47,7 +47,7 @@ function draw() {
 	if (bball.x <= canvwidth - canvwidth + bball.dia/2){
 		speedB = 3;
 	}
-	if (bball.y >= canvheight - bball.dia){
+	if (bball.y >= canvheight - bball.dia/2){
 		speedD = -3;
 	}
 	if (bball.y <= canvheight - canvheight + bball.dia/2){

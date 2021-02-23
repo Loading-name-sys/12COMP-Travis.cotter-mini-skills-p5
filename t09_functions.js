@@ -1,5 +1,5 @@
 /********************************************************/
-//
+//t09_functions.js
 /********************************************************/
 var ball = {
 	x: 0,
@@ -12,6 +12,7 @@ var ball = {
 	b:255,
 
 	aball:function(){
+	ball.dia = sSlider.value();
 	if (ball.x >= (bgs.canvwidth - ball.dia/2)){
 		ball.speedX =ball.speedX * -1;
 	}
@@ -37,6 +38,7 @@ var bball = {
 	speedD: 3,
 	
 	abball: function(){
+	bball.dia = sSlider.value();
 	if (bball.x >= (bgs.canvwidth - bball.dia/2)){
 		bball.speedB = -3
 	}
@@ -81,6 +83,7 @@ function setup() {
 
 	sSlider = createSlider(0, 255, 100);
   sSlider.position(20, 20);
+	
 }
 function draw() {
   background(bgs.r, bgs.g, bgs.b, /*t*/);

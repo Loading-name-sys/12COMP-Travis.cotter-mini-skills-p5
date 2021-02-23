@@ -1,5 +1,5 @@
 /********************************************************/
-//
+//t08_random.js
 /********************************************************/
 var ball = {
 	x: 0,
@@ -11,9 +11,9 @@ var bball = {
  	y: 200,
 	dia: 50
 };
-var speedX = 3;
+var speedX = 4;
 var speedY = 3;
-var speedB = 3;
+var speedB = 5;
 var speedD = 3;
 var canvwidth = 400;
 var canvheight = 400;
@@ -30,13 +30,16 @@ var ballC ={
 
 function setup() {
   createCanvas(canvwidth, canvheight);
-	ball.x = random (0, 90);
-	ball.y = random (100, 200);
-	bball.x = random (10, 100);
-	bball.y = random (200, 300)
+	ball.x = random (10, 390);
+	ball.y = random (10, 390);
+	bball.x = random (10, 390);
+	bball.y = random (10, 390)
 }
 function draw() {
-  background(r, g, b, t);
+  r = random (0, 255)
+	g = random (0, 255)
+	b = random (0, 255) 
+	background(r, g, b, t);
 	ballC.r = random (50, 250);
 	ballC.g = random (50, 250);
 	ballC.b = random (50, 250);

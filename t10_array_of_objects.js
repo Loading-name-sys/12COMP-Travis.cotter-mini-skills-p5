@@ -52,7 +52,8 @@ function setup() {
 	lmao[0].ini;
 	sSlider = createSlider(0, 255, 100);
   sSlider.position(20, 20);
-	
+	bSlider = createSlider(0, 255, 100);
+  bSlider.position(200, 20);
 }
 function draw() {
   background(bgs.r, bgs.g, bgs.b, /*bgs.t*/);

@@ -6,6 +6,6 @@ function setup() {
 }
 
 function draw() {
-	stroke(255, 17, 0, 50);
+	stroke(225, 225, 225);
 	line(mouseX, mouseY, mouseX, mouseY);
 }

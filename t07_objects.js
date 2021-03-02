@@ -27,7 +27,10 @@ function setup() {
 }
 function draw() {
   background(r, g, b);
-	ellipse(ball.x, ball.y, ball.dia);
+	ball.x = ball.x + speedX;
+	ball.y = ball.y + speedY;
+	bball.x = bball.x + speedB;
+	bball.y = bball.y + speedD;
 	if (ball.x >= (canvwidth - ball.dia/2)){
 		speedX = -3;
 	}
@@ -40,7 +43,7 @@ function draw() {
 	if (ball.y <= canvheight - canvheight + ball.dia/2){
 		speedY = 3;
 	}
-	ellipse(bball.x, bball.y, bball.dia)
+	ellipse(ball.x, ball.y, ball.dia);
 	if (bball.x >= (canvwidth - bball.dia/2)){
 		speedB = -3
 	}
@@ -53,8 +56,5 @@ function draw() {
 	if (bball.y <= canvheight - canvheight + bball.dia/2){
 		speedD = 3;
 	}
-	ball.x = ball.x + speedX;
-	ball.y = ball.y + speedY;
-	bball.x = bball.x + speedB;
-	bball.y = bball.y + speedD;
+	ellipse(bball.x, bball.y, bball.dia)
 }

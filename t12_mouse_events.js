@@ -1,12 +1,27 @@
 /********************************************************/
 //t12_mouse_events.js
 /********************************************************/
-
+var bgc;
 function setup() {
-  createCanvas(400, 400);
+	let canvs = createCanvas(400, 400);
+	canvs.mouseOver(bgcolOver);
+	canvs.mouseOut(bgcolOut);
+	canvs.mousePressed(mPress)
+	bgc = color("yellow");
 }
 
 function draw() {
-  background(220);
-	createButton();
+	background(bgc);
+}
+
+function bgcolOver(){
+	bgc = color("red");
+}
+
+function bgcolOut(){
+	bgc = color("yellow");
+}
+
+function mPress(){
+	bgc = color("green");
 }

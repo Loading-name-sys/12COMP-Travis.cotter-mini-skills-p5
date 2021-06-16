@@ -7,7 +7,7 @@ function setup() {
 	canvs.mouseOver(bgcolOver);
 	canvs.mouseOut(bgcolOut);
 	canvs.mousePressed(mPress)
-	bgc = color("yellow");
+	bgc = color("orange");
 }
 
 function draw() {
